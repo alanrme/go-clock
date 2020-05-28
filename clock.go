@@ -115,7 +115,7 @@ func main() {
 	printTime(format, *font) // print time instantly on app start
 
 	ticker := time.NewTicker(1 * time.Second) // run ticker once per second
-	for _ = range ticker.C {                  // every time it triggers
+	for range ticker.C {                      // every time it triggers
 		printTime(format, *font) // print time
 	}
 }
