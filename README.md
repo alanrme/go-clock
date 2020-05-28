@@ -13,7 +13,7 @@
 Needs unicode
 
 ## Installation
-If you had go installed properly,
+If you have go installed properly,
 ```
 go build .
 go install .
