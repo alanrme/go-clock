@@ -1,5 +1,9 @@
 # go-clock
- Alternative to tty-clock which kinda sucks. Written in Go (first Go app!)
+ Alternative to tty-clock which kinda sucks. Written in Go (first Go app!)  
+ Demos with seconds, font and color. OBS died on the second one but I don't have the time to rerecord.
+ 
+ ![](https://i.imgur.com/8bNRNV1.gif)
+ ![](https://i.imgur.com/lS3C3UQ.gif)
  
 ## Compatibility
 - Linux
