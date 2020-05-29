@@ -16,7 +16,7 @@ import (
 // every line is a number, starting from 0 up to 9
 // 7 lines per number
 var fonts = map[string][10][7]string{
-	"default": {
+	"block": {
 		{"█████", "█   █", "█   █", "█   █", "█   █", "█   █", "█████"},
 		{"███  ", "  █  ", "  █  ", "  █  ", "  █  ", "  █  ", "█████"},
 		{"█████", "    █", "    █", "█████", "█    ", "█    ", "█████"},
@@ -70,10 +70,10 @@ func clear() {
 func main() {
 	// for command line flags
 	// flag name, default value, description
-	foreground := flag.String("color", "white", "Foreground color of the time output (red, yellow, green, mint, cyan, teal, blue, purple, magenta, violet, pink, black, grey, gray)")
+	foreground := flag.String("color", "white", "Foreground color of the time output (white, red, yellow, green, mint, cyan, teal, blue, purple, magenta, violet, pink, black, grey, gray)")
 
 	// font
-	font := flag.String("font", "default", "█default, ║pipe, ┃line")
+	font := flag.String("font", "block", "█block, ║pipe, ┃line")
 
 	// if this flag is included (--seconds) then seconds are enabled
 	seconds := flag.Bool("seconds", false, "Enable Seconds display")
@@ -82,7 +82,7 @@ func main() {
 
 	if _, ok := fonts[*font]; !ok { // if the font exists
 		fmt.Println("Invalid font. Using default")
-		*font = "default"
+		*font = "block"
 	}
 
 	switch *foreground {
