@@ -13,6 +13,11 @@
 Needs unicode
 
 ## Installation
+### Arch
+![go-clock](https://aur.archlinux.org/packages/go-clock) is on the AUR. With yay:
+`yay -S go-clock`
+
+### Others
 If you have go installed properly,
 ```
 go build .
