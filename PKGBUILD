@@ -30,24 +30,20 @@ md5sums=()
 validpgpkeys=()
 
 prepare(){
-    cd "$pkgname-$pkgver"
-    ./configure --prefix=/usr
+    cd "$srcdir"
     mkdir -p build
 }
 
 build(){
-    cd "$pkgname-$pkgver"
-    go build -o build .
+    go build -o build/$pkgname .
 }
 
 check() {
-  cd "$pkgname-$pkgver"
-  go test ./...
+    go test .
 }
 
 package() {
-  cd "$pkgname-$pkgver"
-  install -Dm755 build/$pkgname "$pkgdir"/usr/bin/$pkgname
+    sudo install -Dm755 build/$pkgname /usr/bin/$pkgname
 }
 
-md5sums=('215fc97c9305c480552fdfb22adc01aa')
+md5sums=('2f296c9bf6984a9d819cdc490a626b71')
