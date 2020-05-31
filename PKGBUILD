@@ -9,7 +9,7 @@ pkgver=1.0.0
 pkgrel=1
 epoch=
 pkgdesc="go-clock command line utility to make a large clock using Unicode characters"
-arch=()
+arch=("x86_64")
 url="https://github.com/XilogOfficial/go-clock/raw/master/"
 license=('MIT')
 groups=()
@@ -31,6 +31,7 @@ validpgpkeys=()
 
 prepare(){
     cd "$pkgname-$pkgver"
+    ./configure --prefix=/usr
     mkdir -p build
 }
 
@@ -48,3 +49,5 @@ package() {
   cd "$pkgname-$pkgver"
   install -Dm755 build/$pkgname "$pkgdir"/usr/bin/$pkgname
 }
+
+md5sums=('215fc97c9305c480552fdfb22adc01aa')
