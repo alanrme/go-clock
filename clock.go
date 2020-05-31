@@ -78,6 +78,9 @@ func main() {
 	// if this flag is included (--seconds) then seconds are enabled
 	seconds := flag.Bool("seconds", false, "Enable Seconds display")
 
+	// if this flag is included (--static) then the clock does not update
+	static := flag.Bool("static", false, "Makes the clock print once without updating")
+
 	flag.Parse() // parse flags
 
 	if _, ok := fonts[*font]; !ok { // if the font exists
@@ -114,9 +117,11 @@ func main() {
 
 	printTime(format, *font) // print time instantly on app start
 
-	ticker := time.NewTicker(1 * time.Second) // run ticker once per second
-	for range ticker.C {                      // every time it triggers
-		printTime(format, *font) // print time
+	if !*static {
+		ticker := time.NewTicker(1 * time.Second) // run ticker once per second
+		for range ticker.C {                      // every time it triggers
+			printTime(format, *font) // print time
+		}
 	}
 }
 
