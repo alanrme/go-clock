@@ -14,7 +14,7 @@ Needs unicode
 
 ## Installation
 ### Arch
-![go-clock](https://aur.archlinux.org/packages/go-clock) is on the AUR. With yay:
+[go-clock](https://aur.archlinux.org/packages/go-clock) is on the AUR. With yay:
 `yay -S go-clock`
 
 ### Others
