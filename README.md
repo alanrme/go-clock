@@ -34,7 +34,8 @@ Or just run it in the folder you're in with `./go-clock`
 #### Flags
 `--color=<c>` c is the foreground color. (white, red, yellow, green, mint, cyan, teal, blue, purple, magenta, violet, pink, black, grey, gray) Default = white  
 `--seconds` Enables the seconds digits  
-`--font=<f>` Font. (█default, ║pipe, ┃line) Default = default
+`--font=<f>` Font. (█default, ║pipe, ┃line) Default = default  
+`--static` Makes the clock print the time once without updating. Will exit by itself.
 
 ## Fonts
 #### Block
