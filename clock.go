@@ -13,8 +13,8 @@ import (
 	"github.com/JakeMakesStuff/color"
 )
 
-// every line is a number, starting from 0 up to 9
-// 7 lines per number
+// multidimensional arrays consisting of 10 "number arrays" for each number from 0-9
+// each number array has 7 strings, 1 for each line
 var fonts = map[string][10][7]string{
 	"block": {
 		{"█████", "█   █", "█   █", "█   █", "█   █", "█   █", "█████"},
